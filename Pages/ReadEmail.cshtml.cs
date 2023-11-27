@@ -14,10 +14,6 @@ namespace FinalProject.Pages
 
         public void OnGet(string emailid)
         {
-            // ดึงข้อมูลอีเมลจากฐานข้อมูลตาม emailid
-            // นี่คือตัวอย่างเท่านั้น ควรใช้วิธีการเชื่อมต่อกับฐานข้อมูลของคุณ
-
-            // ให้สร้างเมธอดเพื่อดึงข้อมูลจากฐานข้อมูล
             PopulateEmailData(emailid);
         }
 
