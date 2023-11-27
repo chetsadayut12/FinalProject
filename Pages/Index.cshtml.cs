@@ -63,6 +63,8 @@ namespace FinalProject.Pages
                 Console.WriteLine(ex.ToString());
             }
         }
+
+        
     }
     public class EmailInfo
     {
@@ -74,5 +76,7 @@ namespace FinalProject.Pages
         public String EmailSender;
         public String EmailReceiver;
     }
+
+
 
 }
