@@ -56,19 +56,23 @@ namespace FinalProject.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "The First Name must contain only alphabetic characters.")]
             [StringLength(255, ErrorMessage = "The First Name must be in between 1 to 255.", MinimumLength = 1)]
             public string FirstName { get; set; }
 
             [Required]
+            [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "The Last Name must contain only alphabetic characters.")]
             [StringLength(255, ErrorMessage = "The Last Name must be in between 1 to 255.", MinimumLength = 1)]
             public string LastName { get; set; }
 
             [Required]
+            [RegularExpression("^[0-9]+$", ErrorMessage = "The Mobile Phone must contain only numeric characters.")]
             [StringLength(15, ErrorMessage = "The Mobile Phone must be in between 7 to 15.", MinimumLength = 7)]
             public string MobilePhone { get; set; }
 
             [Required]
             [StringLength(255, ErrorMessage = "The Username must be between 1 to 255.", MinimumLength = 1)]
+            [RegularExpression("^[^0-9]+$", ErrorMessage = "The Username cannot contain numbers.")]
             public string UserName { get; set; }
 
             [Required]
