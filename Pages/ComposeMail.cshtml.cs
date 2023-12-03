@@ -39,6 +39,7 @@ namespace FinalProject.Pages
                     SaveEmailToDatabase(Recipient, Subject, Body);
 
                     _logger.LogInformation($"Email sent to {Recipient} with subject: {Subject}");
+                    TempData["Message"] = "Email sent successfully";
                     return RedirectToPage("/Index"); 
                 }
                 else

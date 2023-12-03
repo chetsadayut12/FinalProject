@@ -22,6 +22,11 @@ namespace FinalProject.Pages
         {
             try
             {
+                if (TempData.ContainsKey("Message"))
+                {
+                    ViewData["Message"] = TempData["Message"].ToString();
+                }
+
                 String connectionString = "Server=tcp:abcdgroup.database.windows.net,1433;Initial Catalog=DBforProjectCS;Persist Security Info=False;User ID=abcd;Password=cs4361234.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
